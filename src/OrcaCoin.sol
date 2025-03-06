@@ -9,7 +9,7 @@ contract OrcaCoin is ERC20, Ownable {
         stakingContract = _stakingContract;
 
     }
-    function mint(address to, uint256 amount) public onlyOwner  {
+    function mint(address to, uint256 amount) public   {
         require(msg.sender == stakingContract, "Only staking contract can mint");
         _mint(to, amount);
     }
